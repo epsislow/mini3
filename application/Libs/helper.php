@@ -56,10 +56,10 @@ class Helper
 
 	static public function addStyles($styles, $rel = 'stylesheet') {
 		$result = [];
-		foreach($style as $style) {
+		foreach($styles as $style) {
 			$result[] = '<link href="/css/'.$style.'" rel="'.$rel.'"/>';
 		}
-		return $result;
+		return static::addToHtml($result);
 	}
 	
 	static public function addScripts($scripts, $type = 'javascript') {
@@ -67,10 +67,10 @@ class Helper
 		foreach($scripts as $script) {
 			$result[] = '<script src="/js/'.$script.'" type="'.$type.'"/>';
 		}
-		return $result;
+		return static::addToHtml($result);
 	}
 	
-	private function addToHtml(array $tags = []) {
+	static public function addToHtml(array $tags = []) {
 		return implode("\n", $tags);
 	}
 }
