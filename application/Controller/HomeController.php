@@ -10,8 +10,9 @@
  */
 
 namespace Mini\Controller;
+use Mini\Core\Controller;
 
-class HomeController
+class HomeController extends Controller
 {
     /**
      * PAGE: index

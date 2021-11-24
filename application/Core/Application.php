@@ -14,6 +14,8 @@ class Application
 
     /** @var array URL parameters */
     private $url_params = array();
+	
+	private $request = array();
 
     /**
      * "Start" the application:
@@ -37,6 +39,8 @@ class Application
             // like \Mini\Controller\CarController
             $controller = "\\Mini\\Controller\\" . ucfirst($this->url_controller) . 'Controller';
             $this->url_controller = new $controller();
+			
+			$this->url_controller->setRequest($this->request);
 
             // check for method: does such a method exist in the controller ?
             if (method_exists($this->url_controller, $this->url_action) &&
@@ -93,6 +97,8 @@ class Application
             //echo 'Controller: ' . $this->url_controller . '<br>';
             //echo 'Action: ' . $this->url_action . '<br>';
             //echo 'Parameters: ' . print_r($this->url_params, true) . '<br>';
-        }
+        } else if (!empty($_POST)) {
+			$this->request = $_POST;
+		}
     }
 }
