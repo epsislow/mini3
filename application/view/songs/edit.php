@@ -6,7 +6,7 @@
         <form action="<?php echo URL; ?>songs/updatesong" method="POST">
             <label>Artist</label>
             <input autofocus type="text" name="artist" value="<?php echo htmlspecialchars($song->artist, ENT_QUOTES, 'UTF-8'); ?>" required />
-            <label>Track</label>
+            <label>Title</label>
             <input type="text" name="track" value="<?php echo htmlspecialchars($song->track, ENT_QUOTES, 'UTF-8'); ?>" required />
             <label>Link</label>
             <input type="text" name="link" value="<?php echo htmlspecialchars($song->link, ENT_QUOTES, 'UTF-8'); ?>" />

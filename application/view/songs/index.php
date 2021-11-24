@@ -7,7 +7,7 @@
         <form action="<?php echo URL; ?>songs/addsong" method="POST">
             <label>Artist</label>
             <input type="text" name="artist" value="" required />
-            <label>Track</label>
+            <label>Title</label>
             <input type="text" name="track" value="" required />
             <label>Link</label>
             <input type="text" name="link" value="" />
@@ -28,7 +28,7 @@
             <tr>
                 <td>Id</td>
                 <td>Artist</td>
-                <td>Track</td>
+                <td>Title</td>
                 <td>Link</td>
                 <td>DELETE</td>
                 <td>EDIT</td>

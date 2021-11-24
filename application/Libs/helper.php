@@ -54,4 +54,23 @@ class Helper
         return $raw_sql;
     }
 
+	static public function addStyles($styles, $rel = 'stylesheet') {
+		$result = [];
+		foreach($style as $style) {
+			$result[] = '<link href="/css/'.$style.'" rel="'.$rel.'"/>';
+		}
+		return $result;
+	}
+	
+	static public function addScripts($scripts, $type = 'javascript') {
+		$result = [];
+		foreach($scripts as $script) {
+			$result[] = '<script src="/js/'.$script.'" type="'.$type.'"/>';
+		}
+		return $result;
+	}
+	
+	private function addToHtml(array $tags = []) {
+		return implode("\n", $tags);
+	}
 }

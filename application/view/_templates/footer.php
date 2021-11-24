@@ -1,7 +1,6 @@
 
     <div class="footer">
-        Find <a href="https://github.com/panique/mini3">MINI3 on GitHub</a>.
-        If you like the project, support it by <a href="http://tracking.rackspace.com/SH1ES">using Rackspace</a> as your hoster [affiliate link].
+        Some bla bla in the footer
     </div>
 
     <!-- jQuery, loaded in the recommended protocol-less way -->
@@ -12,8 +11,9 @@
     <script>
         var url = "<?php echo URL; ?>";
     </script>
-
+	
     <!-- our JavaScript -->
     <script src="<?php echo URL; ?>js/application.js"></script>
+	<?php echo !empty($js)? Mini\Libs\Helper::addScripts($js): ''; ?>
 </body>
 </html>

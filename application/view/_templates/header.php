@@ -12,6 +12,7 @@
 
     <!-- CSS -->
     <link href="<?php echo URL; ?>css/style.css" rel="stylesheet">
+	<?php echo !empty($css)? Mini\Libs\Helper::addStyles($css): ''; ?>
 </head>
 <body>
     <!-- logo, check the CSS file for more info how the logo "image" is shown -->

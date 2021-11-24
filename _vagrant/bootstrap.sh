@@ -6,6 +6,7 @@
 PASSWORD='12345678'
 PROJECTFOLDER='myproject'
 
+<<commented
 sudo apt-get update
 sudo apt-get -y upgrade
 
@@ -62,6 +63,8 @@ curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/loca
 
 # go to project folder, create the PSR4 autoloader with Composer
 cd "/var/www/html/${PROJECTFOLDER}"
+commented
+
 composer install
 
 # run SQL statements from MINI3 folder
